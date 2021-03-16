@@ -1,13 +1,10 @@
 // Your code here
-function saturdayFun(target = "roller-skate") {
-    console.log(`This Saturday, I want to ${target}`)
+function saturdayFun(activity = "roller-skate") {
+    return `This Saturday, I want to ${activity}!`
 }
 
-saturdayFun("eat pudding.")
-saturdayFun()
-
-let mondayWork = function(target = "go to the office") {
-    console.log(`This Monday, I will ${target}.`)
+let mondayWork = function(activity = "go to the office") {
+    return `This Monday, I will ${activity}.`
 }
 
 mondayWork("go to wrigly")
@@ -15,6 +12,34 @@ mondayWork()
 
 let wrapAdjective = function(style = "*") {
     return function(adjective = "special") {
-        `You are ${style}${adjective}${style}!`
+        return `You are ${style}${adjective}${style}!`
     }
 }
+
+
+const Calculator = {
+    add: function(a, b) {
+        return a + b
+    },
+    subtract: function(a, b) {
+        return a - b
+    },
+    multiply: function(a, b) {
+        return a * b
+    },
+    divide: function(a,b) {
+        return a / b;
+      }
+}
+
+let actionApplyer = function(start, arr) {
+    let a = start
+
+    for (let i = 0; i < arr.length; i++ ){
+        a = arr[i](a)
+      }
+    
+      return a
+    }
+
+    
